@@ -1,0 +1,50 @@
+{
+  "table_name": "transaction",
+  "columns": [
+    {
+      "name": "transaction_id",
+      "type": "string",
+      "description": "Unique identifier for each transaction"
+    },
+    {
+      "name": "account_id",
+      "type": "string",
+      "description": "Identifier for the account associated with the transaction"
+    },
+    {
+      "name": "timestamp",
+      "type": "timestamp",
+      "description": "Date and time when the transaction occurred"
+    },
+    {
+      "name": "amount",
+      "type": "double",
+      "description": "Monetary value of the transaction"
+    },
+    {
+      "name": "counterparty",
+      "type": "string",
+      "description": "The other party involved in the transaction"
+    },
+    {
+      "name": "transaction_type",
+      "type": "string",
+      "description": "Type of transaction (e.g., credit, debit)"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "description": "Additional information about the transaction"
+    },
+    {
+      "name": "converted_amount",
+      "type": "double",
+      "description": "Amount after currency conversion"
+    },
+    {
+      "name": "exchange_rate",
+      "type": "double",
+      "description": "Rate at which the currency was converted"
+    }
+  ]
+}

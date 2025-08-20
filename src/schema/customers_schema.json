@@ -1,0 +1,45 @@
+{
+  "table_name": "customers",
+  "columns": [
+    {
+      "name": "customer_id",
+      "type": "string",
+      "description": "Unique identifier for each customer"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "Full name of the customer"
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "description": "Physical address of the customer"
+    },
+    {
+      "name": "tax_id",
+      "type": "string",
+      "description": "Tax identification number of the customer"
+    },
+    {
+      "name": "incorporation_date",
+      "type": "date",
+      "description": "Date when the customer was incorporated"
+    },
+    {
+      "name": "country_code",
+      "type": "string",
+      "description": "Country code where the customer is located"
+    },
+    {
+      "name": "business_type",
+      "type": "string",
+      "description": "Type of business the customer is in"
+    },
+    {
+      "name": "risk_category",
+      "type": "string",
+      "description": "Risk category assigned to the customer"
+    }
+  ]
+}
