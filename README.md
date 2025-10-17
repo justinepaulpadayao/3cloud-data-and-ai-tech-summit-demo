@@ -1,8 +1,10 @@
-# Data Engineering Pipeline for Financial Data
+# 3Cloud GDC Data and AI Tech Summit Demo
 
 ## Project Overview
 
-This project is a data engineering pipeline designed to process financial data. It uses PySpark to ingest data from Azure Blob Storage, transform it, and load it into a Delta Lake. The pipeline includes scripts for ingesting data from various sources and transforming it into a format suitable for analysis.
+This project showcases the capabilities of **AI and Engineering Discipline in production-grade environment pipelines** for the **3Cloud GDC Data and AI Tech Summit**. It demonstrates an AI-driven, production-grade data engineering framework that leverages functional programming principles, Databricks Connect integration, and industry best practices to process financial data.
+
+The pipeline uses PySpark to ingest data from Azure Blob Storage, transform it through medallion architecture layers (Bronze → Silver → Gold), and demonstrates how AI can enhance data engineering workflows through intelligent recommendations, automated testing, and modular, composable utilities.
 
 ## Directory Structure
 
