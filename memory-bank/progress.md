@@ -16,3 +16,4 @@ This file tracks the project's progress using a task list format.
 ## Next Steps
 
 *   Begin architectural planning and module design
+[2025-10-17 14:09:07] - Updated README.md with redefined project structure and corrected config directory references

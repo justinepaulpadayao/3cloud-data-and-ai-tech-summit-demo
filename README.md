@@ -6,37 +6,18 @@ This project is a data engineering pipeline designed to process financial data. 
 
 ## Directory Structure
 
-```
-.
-├── config/
-│   └── config.yaml             # Configuration file
-├── docs/
-│   └── README.md             # Documentation
-├── dummy-data/
-│   ├── data_generators/        # Scripts for generating dummy data
-│   └── data_validators/        # Scripts for validating dummy data
-├── generated-data/           # Location for generated data
-│   ├── account/                # Parquet files for account data
-│   ├── customer/               # Parquet files for customer data
-│   └── transaction/            # Parquet files for transaction data
-├── memory-bank/              # Memory bank files
-│   ├── activeContext.md        # Active context
-│   ├── decisionLog.md          # Decision log
-│   ├── productContext.md       # Product context
-│   ├── progress.md             # Progress tracking
-│   └── systemPatterns.md       # System patterns
-├── src/
-│   ├── bronze/                 # Bronze layer (raw data)
-│   │   └── pyspark/            # PySpark scripts for bronze layer
-│   ├── gold/                   # Gold layer (transformed data)
-│   │   └── accounts_gold.py    # Script for transforming account data
-│   ├── schema/                 # Schemas for data validation
-│   └── silver/                 # Silver layer (intermediate data)
-├── tests/
-│   └── test_accounts_gold.py # Tests for accounts gold layer
-├── typings/                  # Type definitions
-└── utils/                    # Utility functions
-```
+- **Configuration:** [`configs/`](configs/README.md) — Stores environment and connection settings.
+- **Documentation:** [`docs/`](docs/README.md) — Project documentation.
+- **Memory Bank:** [`memory-bank/`](memory-bank/productContext.md) — Tracks context, decisions, progress, and patterns.
+- **Source Code:** [`src/`](src/bronze/README.md) — Pipeline code by layer:
+  - [`bronze/`](src/bronze/README.md): Raw data ingestion.
+  - [`silver/`](src/silver/README.md): Intermediate transformations.
+  - [`gold/`](src/gold/README.md): Final transformations.
+  - [`schema/`](src/schema/): Data validation schemas.
+- **Utilities:** [`utils/`](utils/README.md) — Data processing and validation helpers.
+- **Testing:** [`tests/`](tests/README.md) — Unit/integration tests per layer.
+- **Data:** [`data/`](data/README.md) — Input/output data files.
+- **Scripts:** [`scripts/`](scripts/README.md) — Standalone pipeline scripts.
 
 ## Setup and Installation
 
@@ -46,7 +27,11 @@ This project is a data engineering pipeline designed to process financial data. 
     *   Azure Blob Storage account
     *   Databricks CLI (if deploying to Databricks)
 
-2.  **Install Dependencies:**
+2.  **Databricks Connect Setup:**
+    *   **Note:** The Python virtual environment will be configured automatically by Databricks Connect.
+    *   Follow the official Databricks Connect setup guide for Python at: https://docs.databricks.com/gcp/en/dev-tools/databricks-connect/python to complete the environment setup process.
+
+3.  **Install Dependencies:**
 
     ```bash
     pip install -r requirements.txt
@@ -54,8 +39,8 @@ This project is a data engineering pipeline designed to process financial data. 
 
     *(Note: The `requirements.txt` file is currently empty. Please add the required dependencies to this file.)*
 
-3.  **Configuration:**
-    *   Create a `config.yaml` file in the `config/` directory.
+4.  **Configuration:**
+    *   Create a `config.yaml` file in the `configs/` directory.
     *   Configure the Azure Blob Storage connection details, including the account name, container name, and paths to the data files.
 
 ## Usage Examples
