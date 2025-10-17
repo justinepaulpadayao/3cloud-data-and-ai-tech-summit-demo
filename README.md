@@ -31,15 +31,7 @@ This project is a data engineering pipeline designed to process financial data. 
     *   **Note:** The Python virtual environment will be configured automatically by Databricks Connect.
     *   Follow the official Databricks Connect setup guide for Python at: https://docs.databricks.com/gcp/en/dev-tools/databricks-connect/python to complete the environment setup process.
 
-3.  **Install Dependencies:**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-    *(Note: The `requirements.txt` file is currently empty. Please add the required dependencies to this file.)*
-
-4.  **Configuration:**
+3.  **Configuration:**
     *   Create a `config.yaml` file in the `configs/` directory.
     *   Configure the Azure Blob Storage connection details, including the account name, container name, and paths to the data files.
 
