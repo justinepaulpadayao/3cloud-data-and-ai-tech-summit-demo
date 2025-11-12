@@ -1,55 +1,301 @@
-# Project Brief: AI-Driven Data Engineering Framework
+# [Project Name] - Data Engineering Platform
 
-## Purpose
+## Project Overview
 
-This project establishes a comprehensive boilerplate, framework, and guide for leveraging AI within a modern data engineering workflow. It is designed to maximize the value of the project brief and memory bank, ensuring that architectural decisions and implementation strategies are informed by both human and AI-driven insights.
+[Brief description of what this data engineering project aims to accomplish. What business problems are you solving with data?]
 
-## Memory Bank Integration
-
-The memory bank serves as a persistent context repository, capturing project goals, architectural decisions, progress, and recurring patterns. It enables AI agents to maintain continuity, reference historical context, and make recommendations that align with the evolving needs of the project.
-
-## Functional Programming Principles & Production-Grade Practices
-
-Functional programming is central to this framework, especially for developing robust, maintainable, and scalable data quality tests and utilities. The codebase adheres to industry best practices, including:
-
-- **Immutability:** Data structures are not mutated, ensuring predictable behavior.
-- **Pure Functions:** All transformations and utilities are implemented as pure functions, facilitating testability and reliability.
-- **Composability:** Functions are designed to be modular and composable, enabling chaining and reuse.
-- **Single-Responsibility Principle:** Each transformation function performs only one distinct operation, promoting clarity and maintainability.
-- **Type Safety:** Where possible, type hints and static analysis tools are used to catch errors early.
-- **Linting & Standards:** All code conforms to relevant linters (e.g., PEP8 for Python), and follows established conventions for readability and maintainability.
-- **Documentation:** Functions and modules are documented with clear docstrings and comments.
-- **Testing:** Unit and integration tests are written for all critical components, with a focus on coverage and edge cases.
-
-## Technology-Agnostic Design with Databricks Connect Integration
-
-While the framework is technology-agnostic, it demonstrates practical integration with Databricks Connect for scalable Spark DataFrame operations. This includes:
-
-- **Chaining Dataframe Transformations:** Spark DataFrames are transformed using sequences of functional operations, leveraging the DataFrame `transform` method for modularity and clarity.
-- **Reusable Utilities:** Utilities for data validation and transformation are compatible with Databricks Connect, but remain abstracted for portability.
-- **AI-Driven Recommendations:** AI agents suggest improvements and generate utilities that integrate seamlessly with Databricks Connect.
-
-## AI-Driven Guidance
-
-AI agents enhance the project by:
-
-- **Improving Test Coverage:** Automatically suggesting new data quality tests based on observed patterns and gaps.
-- **Utility Creation:** Recommending and generating reusable utilities for common data engineering tasks.
-- **Project Guidance:** Providing architectural recommendations, code reviews, and documentation updates to ensure best practices.
-
-## Scalability and Maintainability
-
-By combining functional programming with AI-driven insights and production-grade engineering practices, the framework supports scalable, maintainable solutions that adapt to changing requirements. The modular design enables rapid iteration and integration of new features, while the memory bank ensures that context is preserved across sessions.
-
-## Usage
-
-- Reference the memory bank for context before making architectural or implementation decisions.
-- Implement data quality tests and utilities using functional programming principles and production-grade practices.
-- Ensure each transformation function adheres to the single-responsibility principle and utilizes the DataFrame `transform` method for chaining.
-- Leverage AI agents for recommendations, code generation, and documentation.
-- Integrate with Databricks Connect for scalable Spark operations.
-- Continuously update the memory bank to reflect project progress and decisions.
+Example: Building a modern data platform to enable data-driven decision making through automated ETL pipelines, robust data quality frameworks, and self-service analytics capabilities.
 
 ---
 
-2025-10-17 13:38:11 - Enhanced project brief to emphasize DataFrame `transform` usage and single-responsibility principle in transformation logic.
+## Business Context
+
+### Problem Statement
+[What business challenge or opportunity is driving this project?]
+
+### Expected Business Impact
+- [Impact 1: e.g., Reduce manual reporting time by X%]
+- [Impact 2: e.g., Enable real-time visibility into key metrics]
+- [Impact 3: e.g., Improve data accuracy and reliability]
+
+---
+
+## Project Goals
+
+### Primary Objectives
+- [ ] [Goal 1: e.g., Build automated data pipelines for key business processes]
+- [ ] [Goal 2: e.g., Establish data quality monitoring and alerting]
+- [ ] [Goal 3: e.g., Create unified data models for reporting]
+- [ ] [Goal 4: e.g., Enable self-service analytics for stakeholders]
+
+### Success Metrics
+- [Metric 1: e.g., Pipeline reliability > 99.5%]
+- [Metric 2: e.g., Data freshness < 24 hours]
+- [Metric 3: e.g., User adoption of dashboards]
+- [Metric 4: e.g., Reduction in data-related support tickets]
+
+---
+
+## Technical Stack
+
+### Cloud Platform
+- **Provider**: Microsoft Azure
+- **Primary Services**: [List Azure services being used]
+
+### Data Processing
+- **Framework**: PySpark
+- **Platform**: [Choose one or specify]
+  - Microsoft Fabric (Spark, Data Engineering workloads)
+  - Azure Databricks (if using)
+  - _Note: Pipelines designed to be portable between platforms_
+- **Language**: Python 3.9+
+- **Notebooks**: [Fabric Notebooks / Databricks Notebooks]
+
+### Data Storage
+- **Data Lake**: Azure Data Lake Storage Gen2 (ADLS)
+- **Data Warehouse**: [Specify: Fabric Data Warehouse / Azure Synapse / etc.]
+- **Architecture Pattern**: Medallion (Bronze → Silver → Gold)
+
+### Business Intelligence
+- **Primary BI Tool**: Microsoft PowerBI
+- **Report Distribution**: PowerBI Service
+- **Data Models**: [Semantic Models / Power BI Datasets]
+
+### Data Sources & APIs
+- **Planning System**: Anaplan (via API)
+  - [Specify: Models/modules being integrated]
+  - [API version/endpoints used]
+- **Additional Sources**: [List other data sources]
+  - [ERP systems]
+  - [CRM systems]
+  - [Other APIs]
+
+### Development Tools
+- **IDE**: VS Code with extensions
+  - Roocode (AI-assisted development)
+  - Python extensions
+  - Fabric/Databricks extensions (as applicable)
+- **Version Control**: Git / Azure DevOps Repos
+- **Package Management**: pip, requirements.txt
+- **Testing**: pytest, data quality frameworks
+
+### Orchestration & Automation
+- **Workflow**: [Specify: Fabric Pipelines / Azure Data Factory / Databricks Workflows]
+- **Scheduling**: [Fabric Scheduler / ADF Triggers / Databricks Jobs]
+- **Monitoring**: [Azure Monitor / Fabric Monitoring]
+
+---
+
+## Data Architecture
+
+### Layered Architecture (Medallion)
+
+```
+Bronze Layer (Raw)
+    ↓
+    Extract data as-is from sources
+    Minimal transformation
+    Full historical data
+    
+Silver Layer (Cleaned)
+    ↓
+    Cleansed and validated
+    Standardized schemas
+    Business logic applied
+    
+Gold Layer (Curated)
+    ↓
+    Business-ready datasets
+    Aggregated metrics
+    Optimized for reporting
+```
+
+### Key Data Domains
+- [Domain 1: e.g., Finance & Planning (from Anaplan)]
+- [Domain 2: e.g., Operations]
+- [Domain 3: e.g., Sales & Marketing]
+- [Domain 4: Add as needed]
+
+### Data Quality Framework
+- **Validation Rules**: [Great Expectations / Custom PySpark checks]
+- **Monitoring**: Automated data quality dashboards
+- **Alerting**: [Specify alerting mechanism]
+- **Standards**: Based on defined data quality dimensions
+
+---
+
+## Integration Points
+
+### Anaplan Integration
+- **Type**: REST API
+- **Authentication**: [Basic / OAuth / Certificate]
+- **Data Flow**: 
+  - [Direction: Anaplan → Data Lake]
+  - [Direction: Data Lake → Anaplan (if applicable)]
+- **Key Models/Modules**: [List specific Anaplan models]
+- **Sync Frequency**: [Daily / Hourly / Real-time]
+
+### PowerBI Integration
+- **Connection Type**: [DirectQuery / Import / Composite]
+- **Data Sources**: Gold layer datasets
+- **Refresh Schedule**: [Specify refresh cadence]
+- **Key Reports/Dashboards**: [List main reporting outputs]
+
+### Additional Integrations
+- [System 1]: [Connection details]
+- [System 2]: [Connection details]
+
+---
+
+## Development Standards
+
+### Code Quality
+- PySpark coding standards strictly enforced
+- Documented in: `docs/standards/pyspark-coding-standards.md`
+- Key principles:
+  - Use F, T, W imports for PySpark
+  - DataFrame suffix: `_df`
+  - Column names: PascalCase
+  - Functions: lower_snake_case with prefixes (with_*, filter_*, etc.)
+  - No UDFs unless absolutely necessary
+  - Maximum 79 characters per line
+
+### Documentation
+- All pipelines documented with purpose, inputs, outputs
+- Data lineage tracked
+- Decision log maintained in Memory Bank
+
+### Testing
+- Unit tests for all column functions
+- Integration tests for pipelines
+- Data quality tests on outputs
+- Minimum 80% code coverage (where applicable)
+
+---
+
+## Project Phases
+
+### Phase 1: Foundation
+- [ ] Environment setup (Fabric/Databricks workspace)
+- [ ] Bronze layer ingestion from key sources
+- [ ] Base data quality framework
+- [ ] Initial PowerBI connection
+
+### Phase 2: Core Pipelines
+- [ ] Silver layer transformations
+- [ ] Gold layer business logic
+- [ ] Anaplan API integration
+- [ ] Automated orchestration
+
+### Phase 3: Analytics & Reporting
+- [ ] PowerBI semantic models
+- [ ] Key business dashboards
+- [ ] Self-service data access
+- [ ] User training and documentation
+
+### Phase 4: Optimization & Scale
+- [ ] Performance tuning
+- [ ] Advanced data quality monitoring
+- [ ] Enhanced automation
+- [ ] Expand to additional data sources
+
+---
+
+## Key Stakeholders
+
+### Business Stakeholders
+- [Name/Role]: [Responsibility/Interest]
+- [Name/Role]: [Responsibility/Interest]
+
+### Technical Team
+- Data Engineering: [Team members/roles]
+- BI/Analytics: [Team members/roles]
+- Platform/DevOps: [Team members/roles]
+
+### End Users
+- [Department 1]: [Use cases]
+- [Department 2]: [Use cases]
+
+---
+
+## Constraints & Considerations
+
+### Technical Constraints
+- [Constraint 1: e.g., Must work within Azure tenant security policies]
+- [Constraint 2: e.g., Limited to Fabric free/Pro capacity]
+- [Constraint 3: e.g., Anaplan API rate limits]
+
+### Business Constraints
+- [Constraint 1: e.g., Timeline requirements]
+- [Constraint 2: e.g., Budget limitations]
+- [Constraint 3: e.g., Resource availability]
+
+### Data Governance
+- Data classification requirements
+- Compliance requirements (GDPR, SOC2, etc.)
+- Access control policies
+- Retention policies
+
+---
+
+## Risks & Mitigations
+
+| Risk | Impact | Likelihood | Mitigation |
+|------|--------|------------|------------|
+| [e.g., Anaplan API changes] | High | Medium | [Version pinning, monitoring, fallback options] |
+| [e.g., Data quality issues] | High | Medium | [Automated validation, alerts, remediation procedures] |
+| [e.g., Platform limitations] | Medium | Low | [Design for portability, monitor limits] |
+
+---
+
+## Success Criteria
+
+### Technical Success
+- ✅ All pipelines running with >99% reliability
+- ✅ Data quality checks passing consistently
+- ✅ End-to-end data latency meets SLA
+- ✅ Code quality standards maintained
+- ✅ Full test coverage achieved
+
+### Business Success
+- ✅ Stakeholders using dashboards regularly
+- ✅ Data-driven decisions being made
+- ✅ Reduction in manual data work
+- ✅ Improved data accuracy and trust
+- ✅ Positive user feedback
+
+---
+
+## Additional Notes
+
+### Platform Flexibility
+This project is designed to leverage either Microsoft Fabric or Azure Databricks for PySpark workloads. The medallion architecture and PySpark code patterns remain consistent across platforms, with only minor adjustments needed for platform-specific features.
+
+### Scalability Considerations
+- Bronze layer: Scalable storage in ADLS
+- Silver layer: Optimized partitioning strategies
+- Gold layer: Pre-aggregated for performance
+- PowerBI: Incremental refresh where appropriate
+
+### Future Enhancements
+- [Enhancement 1: e.g., Real-time streaming pipelines]
+- [Enhancement 2: e.g., Machine learning integration]
+- [Enhancement 3: e.g., Advanced analytics capabilities]
+- [Enhancement 4: e.g., Data catalog implementation]
+
+---
+
+## Quick Reference
+
+**Platform**: Microsoft Azure (Fabric/Databricks)  
+**Primary Language**: Python (PySpark)  
+**BI Tool**: PowerBI  
+**Key Integration**: Anaplan API  
+**Architecture**: Medallion (Bronze/Silver/Gold)  
+**Development**: VS Code + Roocode + Memory Bank
+
+---
+
+**Last Updated**: [Date]  
+**Project Status**: [Planning / In Progress / Production]  
+**Next Review**: [Date]

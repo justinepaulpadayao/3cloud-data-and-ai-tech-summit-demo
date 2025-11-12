@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project showcases the capabilities of **AI and Engineering Discipline in production-grade environment pipelines** for the **3Cloud GDC Data and AI Tech Summit**. It demonstrates an AI-driven, production-grade data engineering framework that leverages functional programming principles, Databricks Connect integration, and industry best practices to process financial data.
+This project showcases the capabilities of **AI and Engineering Discipline in production-grade environment pipelines** for the **3Cloud GDC Data and AI Tech Summit**. It demonstrates an AI-driven, production-grade data engineering framework that leverages functional programming principles, Databricks Connect integration, and industry best practices.
 
 The pipeline uses PySpark to ingest data from Azure Blob Storage, transform it through medallion architecture layers (Bronze → Silver → Gold), and demonstrates how AI can enhance data engineering workflows through intelligent recommendations, automated testing, and modular, composable utilities.
 
@@ -11,15 +11,25 @@ The pipeline uses PySpark to ingest data from Azure Blob Storage, transform it t
 - **Configuration:** [`configs/`](configs/README.md) — Stores environment and connection settings.
 - **Documentation:** [`docs/`](docs/README.md) — Project documentation.
 - **Memory Bank:** [`memory-bank/`](memory-bank/productContext.md) — Tracks context, decisions, progress, and patterns.
-- **Source Code:** [`src/`](src/bronze/README.md) — Pipeline code by layer:
-  - [`bronze/`](src/bronze/README.md): Raw data ingestion.
-  - [`silver/`](src/silver/README.md): Intermediate transformations.
-  - [`gold/`](src/gold/README.md): Final transformations.
-  - [`schema/`](src/schema/): Data validation schemas.
-- **Utilities:** [`utils/`](utils/README.md) — Data processing and validation helpers.
-- **Testing:** [`tests/`](tests/README.md) — Unit/integration tests per layer.
-- **Data:** [`data/`](data/README.md) — Input/output data files.
-- **Scripts:** [`scripts/`](scripts/README.md) — Standalone pipeline scripts.
+- **Source Code:** [`src/`](src/bronze/README.md) — AI-enhanced pipeline code organized by medallion architecture:
+  - [`bronze/`](src/bronze/README.md): Raw data ingestion with intelligent error handling.
+  - [`silver/`](src/silver/README.md): Intermediate transformations using functional programming patterns.
+  - [`gold/`](src/gold/README.md): Production-ready analytical datasets with AI-driven quality checks.
+  - [`schema/`](src/schema/): Data validation schemas with automated inference capabilities.
+- **Utilities:** [`utils/`](utils/README.md) — Modular, composable data processing and validation helpers.
+- **Testing:** [`tests/`](tests/README.md) — AI-recommended unit/integration tests per layer.
+- **Data:** [`data/`](data/README.md) — Sample financial datasets for summit demonstration.
+- **Scripts:** [`scripts/`](scripts/README.md) — Production-grade pipeline orchestration scripts.
+
+## Tech Summit Demo Features
+
+### AI & Engineering Discipline Showcase
+
+- **AI-Driven Data Quality**: Intelligent recommendations for test coverage and data validation
+- **Functional Programming Paradigm**: Production-grade transformations using DataFrame `transform` methods
+- **Memory Bank System**: Persistent project context for enhanced AI guidance and decision tracking
+- **Modular Architecture**: Composable utilities demonstrating engineering best practices
+- **Production-Grade Patterns**: Scalable, maintainable code adhering to industry standards
 
 ## Setup and Installation
 
@@ -37,9 +47,9 @@ The pipeline uses PySpark to ingest data from Azure Blob Storage, transform it t
     *   Create a `config.yaml` file in the `configs/` directory.
     *   Configure the Azure Blob Storage connection details, including the account name, container name, and paths to the data files.
 
-## Usage Examples
+## Demo Usage Examples
 
-### Ingesting Data from Azure Blob Storage
+### AI-Enhanced Data Ingestion from Azure Blob Storage
 
 ```python
 from pyspark.sql import SparkSession
@@ -55,7 +65,7 @@ customers_df = spark.read.parquet(customer_uri)
 customers_df.show()
 ```
 
-### Transforming Account Data
+### Production-Grade Functional Transformations
 
 ```python
 from pyspark.sql import SparkSession
@@ -71,14 +81,19 @@ accounts_df = accounts_df.withColumn("credit_utilization_ratio",
 accounts_df.show()
 ```
 
-## Contribution Guidelines
+## Summit Demonstration Highlights
 
-1.  **Coding Style:** Follow the PEP 8 coding style for Python.
-2.  **Branching Strategy:** Use feature branches for new features or bug fixes.
-3.  **Pull Request Process:** Submit pull requests to the `main` branch.
-4.  **Testing:** Write unit tests for all new code.
-5.  **Bug Reports:** Report bugs by creating issues on the GitHub repository.
-6.  **Feature Requests:** Suggest new features by creating issues on the GitHub repository.
+### AI Capabilities Demonstrated
+1.  **Intelligent Data Quality**: AI-driven recommendations for comprehensive test coverage
+2.  **Automated Pattern Recognition**: Smart identification of data transformation patterns
+3.  **Context-Aware Processing**: Memory bank system maintains project intelligence across sessions
+4.  **Predictive Analytics**: Forward-looking insights from processed financial datasets
+
+### Engineering Discipline Excellence
+1.  **Functional Programming**: Immutable transformations and composable operations
+2.  **Production Standards**: Industry-grade error handling, logging, and monitoring
+3.  **Modular Design**: Reusable, testable components following SOLID principles
+4.  **Performance Optimization**: Efficient Spark operations with proper partitioning strategies
 
 ## License Information
 
